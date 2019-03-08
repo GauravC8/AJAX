@@ -1,0 +1,10 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+
+#greetings {
+	font-size: 72px;
+	color: red;
+	text-transform: uppercase;
+}

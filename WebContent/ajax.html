@@ -1,0 +1,31 @@
+<html>
+<head>
+</head>
+<body>
+	<script>
+               function fun1()
+               {
+                  var a;
+                  a=new XMLHttpRequest();
+                  a.open("GET","ajax.txt",true);
+                  a.send();
+                  a.onreadystatechange=function()
+                  {
+                     if(a.readyState==4 && a.status==200)
+                     {
+                        document.getElementById("myDiv").innerHTML = a.responseText;
+                        document.getElementById("textArea").value = a.responseText;
+                     }
+                  }
+               } 
+      </script>
+	<h1>First AJAX PAge</h1>
+	<div>
+		<p id="myDiv">Click the Button Below</p>
+	</div>
+
+	<textarea id="textArea" cols="40" rows="5"></textarea>
+	<br>
+	<button onclick="fun1()">Click herereeeeee</button>
+</body>
+</html>

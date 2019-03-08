@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<Script>
+function fetch(){
+var request = new XMLHttpRequest();
+request.onreadystatechange = function() {
+	if (this.readyState == 4 && this.status == 200) {
+		var response=this.responseText;
+		document.getElementById("mobiles").innerHTML=response;
+	}
+};
+
+	request.open("GET", "Details.jsp", true);
+	request.send();
+}
+</Script>
+</head>
+<body>
+	<button onclick="fetch()">Show Details</button>
+	<div id="mobiles"></div>
+</body>
+</html>
